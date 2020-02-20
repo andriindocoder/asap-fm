@@ -106,7 +106,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>2</td>
+                              <td align="center">2</td>
                               <td>East</td>
                               <td>Conference Room 1</td>
                               <td>22.02.2020 10:34</td>
@@ -138,7 +138,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>2</td>
+                              <td align="center">2</td>
                               <td>East</td>
                               <td>Conference Room 1</td>
                               <td>22.02.2020 10:34</td>
@@ -146,7 +146,7 @@
                               <td>45s</td>
                             </tr>
                             <tr>
-                              <td>3</td>
+                              <td align="center">3</td>
                               <td>North</td>
                               <td>Pantry</td>
                               <td>22.02.2020 10:34</td>
@@ -154,7 +154,7 @@
                               <td>45s</td>
                             </tr>
                             <tr>
-                              <td>5</td>
+                              <td align="center">5</td>
                               <td>South</td>
                               <td>Hall 1</td>
                               <td>22.02.2020 10:34</td>
@@ -162,7 +162,7 @@
                               <td>45s</td>
                             </tr>
                             <tr>
-                              <td>2</td>
+                              <td align="center">2</td>
                               <td>West</td>
                               <td>Office MD</td>
                               <td>22.02.2020 10:34</td>
@@ -170,7 +170,7 @@
                               <td>45s</td>
                             </tr>
                             <tr>
-                              <td>14</td>
+                              <td align="center">14</td>
                               <td>East</td>
                               <td>Conference Room 1</td>
                               <td>22.02.2020 10:34</td>
