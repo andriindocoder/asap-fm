@@ -112,7 +112,7 @@
                               <td>22.02.2020 10:34</td>
                               <td>45s</td>
                               <td style="width: 40%;">
-                                <button class="btn btn-sm btn-danger">Disarm</button>
+                                <button class="btn btn-sm btn-outline-danger">Disarm</button>
                               </td>
                             </tr>
                           </tbody>
@@ -187,10 +187,141 @@
               </div>
             </div>
           </div>
-        </div>            
+        </div> 
+
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-lg-6 connectedSortable ui-sortable">
+            <div class="card" style="border: 1px solid red;">
+              <div class="card-header border-0 ui-sortable-handle" style="cursor: move;">
+                <div class="d-flex justify-content-between">
+                </div>
+              </div>
+              <div class="card-body">
+                <figure class="highcharts-figure">
+                    <div id="container-today" style="width: 100%"></div>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-6 -->
+          <div class="col-lg-6 connectedSortable ui-sortable">
+            <div class="card" style="border: 1px solid red;">
+              <div class="card-header border-0 ui-sortable-handle" style="cursor: move;">
+                <div class="d-flex justify-content-between">
+                </div>
+              </div>
+              <div class="card-body">
+                <figure class="highcharts-figure">
+                    <div id="container-weekly" style="width: 100%"></div>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-6 -->
+        </div>
+
       </div>
       <!-- /.container-fluid -->
     </div>
   </div>
 <!-- /.content-wrapper -->
+@endsection
+@section('script')
+
+<script>
+  Highcharts.chart('container-today', {
+      title: {
+          text: 'Temperature by Device'
+      },
+      xAxis: {
+          categories: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM']
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Total Visitors'
+          },
+          stackLabels: {
+              enabled: true,
+              style: {
+                  fontWeight: 'bold',
+                  color: ( // theme
+                      Highcharts.defaultOptions.title.style &&
+                      Highcharts.defaultOptions.title.style.color
+                  ) || 'gray'
+              }
+          }
+      },
+      series: [{
+          type: 'column',
+          name: 'Entrance Area',
+          data: [5, 6, 10, 12, 11, 18, 21, 22]
+      }, {
+          type: 'column',
+          name: 'Mens Fashion',
+          data: [4, 6, 8, 11, 14, 13, 28, 29]
+      }, {
+          type: 'column',
+          name: 'Women Fashion',
+          data: [1, 2, 4, 6, 9, 11, 15, 14]
+      }, {
+          type: 'line',
+          name: 'Last Week\'s Average',
+          data: [3.33, 4.66, 7.33, 9.66, 11.33, 14, 21.33, 21.66, 25.66, 22.33, 10, 13.33, 10],
+          marker: {
+              lineWidth: 2,
+              lineColor: Highcharts.getOptions().colors[3],
+              fillColor: 'white'
+          }
+      }]
+  });
+</script>
+<script>
+  Highcharts.chart('container-weekly', {
+      title: {
+          text: 'Average Temperature by Wing'
+      },
+      xAxis: {
+          categories: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM']
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Total Visitors'
+          },
+          stackLabels: {
+              enabled: true,
+              style: {
+                  fontWeight: 'bold',
+                  color: ( // theme
+                      Highcharts.defaultOptions.title.style &&
+                      Highcharts.defaultOptions.title.style.color
+                  ) || 'gray'
+              }
+          }
+      },
+      series: [{
+          type: 'column',
+          name: 'Entrance Area',
+          data: [15, 16, 20, 22, 21, 28, 31, 32]
+      }, {
+          type: 'column',
+          name: 'Mens Fashion',
+          data: [14, 16, 18, 21, 24, 23, 38, 39]
+      }, {
+          type: 'column',
+          name: 'Women Fashion',
+          data: [11, 22, 14, 16, 19, 21, 25, 24]
+      }, {
+          type: 'line',
+          name: 'Average',
+          data: [13.33, 14.66, 17.33, 19.66, 21.33, 24, 31.33, 31.66, 35.66, 32.33, 20, 23.33, 20],
+          marker: {
+              lineWidth: 2,
+              lineColor: Highcharts.getOptions().colors[3],
+              fillColor: 'white'
+          }
+      }]
+  });
+</script>
 @endsection
