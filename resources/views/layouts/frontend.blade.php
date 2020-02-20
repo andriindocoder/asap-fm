@@ -19,5 +19,6 @@
   </div>
   <!-- ./wrapper -->
   @include('layouts.asap.script')
+  @yield('script')
 </body>
 </html>
