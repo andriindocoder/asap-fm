@@ -2,7 +2,7 @@
 <html>
 <head>
   @include('layouts.asap.head')
-  @yield('style')
+  @yield('styling')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
