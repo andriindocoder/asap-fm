@@ -112,7 +112,7 @@
                               <td>22.02.2020 10:34</td>
                               <td>45s</td>
                               <td style="width: 40%;">
-                                <button class="btn btn-sm btn-danger">Disarm</button>
+                                <button class="btn btn-sm btn-outline-danger">Disarm</button>
                               </td>
                             </tr>
                           </tbody>
