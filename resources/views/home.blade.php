@@ -2,6 +2,39 @@
 
 @section('judul', 'BUILDING ABC')
 
+<style>
+  .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image2 {
+    position: absolute;
+    top: 80px;
+    left: 400px;
+  }
+  .image3 {
+    position: absolute;
+    top: 200px;
+    left: 800px;
+  }
+  .image4 {
+    position: absolute;
+    top: 325px;
+    left: 400px;
+  }
+  .image5 {
+    position: absolute;
+    top: 175px;
+    left: 675px;
+  }
+</style>
+
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" style="background-color: rgb(210, 243, 254); min-height: 609px;">
@@ -188,6 +221,21 @@
             </div>
           </div>
         </div> 
+
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-lg-12 connectedSortable ui-sortable">
+            <div class="card">
+              <div class="card-body" align="center">
+                <div class="parent">
+                  <img class="image1" src="https://i.pinimg.com/736x/97/6f/df/976fdf2cb3727d0a88c2650e3a3820e0--showroom-design-crossword.jpg" />
+                  <img width="5%" class="image2" src="https://m.gifmania.co.uk/Web-Design-Animated-Gifs/Animated-Web-Buttons/Green-Web-Buttons/Green-Circle-Button-90786.gif" />
+                  <img width="7%" class="image3" src="https://webstockreview.net/images/mystery-clipart-homicide-detective-18.gif" /><img width="5%" class="image4" src="https://m.gifmania.co.uk/Web-Design-Animated-Gifs/Animated-Web-Buttons/Green-Web-Buttons/Green-Circle-Button-90786.gif" /><img width="5%" class="image5" src="https://m.gifmania.co.uk/Web-Design-Animated-Gifs/Animated-Web-Buttons/Green-Web-Buttons/Green-Circle-Button-90786.gif" />
+                  <div class="lds-ripple"><div></div><div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="row" style="margin-top: 20px;">
           <div class="col-lg-6 connectedSortable ui-sortable">
