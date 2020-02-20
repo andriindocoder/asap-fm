@@ -18,7 +18,7 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <div class="image">
+      <div class="image" style="margin-right: 20px;">
         <img width="100%" src="{{ asset('frontend/dist/img/asaplogo.png') }}" alt="Asap Logo">
       </div>
     </li>
