@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper" style="background-color: rgb(210, 243, 254); min-height: 609px;">
+<div class="content-wrapper py-3" style="background-color: rgb(210, 243, 254); min-height: 609px;">
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
@@ -112,7 +112,8 @@
                               <td>22.02.2020 10:34</td>
                               <td>45s</td>
                               <td style="width: 40%;">
-                                <button class="btn btn-sm btn-outline-danger">Disarm</button>
+                                <button class="btn btn-sm btn-outline-success activate">Activate Alarm</button>
+                                <button class="btn btn-sm btn-outline-danger disarm">Disarm</button>
                               </td>
                             </tr>
                           </tbody>
@@ -323,5 +324,47 @@
           }
       }]
   });
+</script>
+<script>
+  var x;
+
+  function changecolors(status) {
+      x = 1;
+      if(status == true) {
+        setInterval(change, 1000);
+      }
+  }
+
+  function change() {
+      if (x === 1) {
+          color = "blue";
+          x = 2;
+      } else {
+          color = "yellow";
+          x = 1;
+      }
+      document.querySelector('.content-wrapper').style.backgroundColor = color;
+      document.querySelector('nav').style.backgroundColor = color;
+  }
+
+  function resetColor() {
+    document.querySelector('.content-wrapper').style.backgroundColor = '#D2F3FE';
+    document.querySelector('nav').style.backgroundColor = '#D2F3FE';
+  }
+</script>
+<script>
+  var blink = false;
+
+  var disarmBtn = document.querySelector('.disarm');
+  disarmBtn.addEventListener('click', function(){
+    window.location.reload();
+  });
+
+  var activateBtn = document.querySelector('.activate');
+  activateBtn.addEventListener('click', function(){
+    var blink = true;
+    changecolors(true);
+  });
+
 </script>
 @endsection
