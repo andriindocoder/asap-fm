@@ -17,26 +17,26 @@
 
     .image2 {
         position: absolute;
-        top: 75;
-        left: 410;
+        top: 12.5%;
+        left: 43%;
     }
 
     .image3 {
         position: absolute;
-        top: 85;
-        left: 187;
+        top: 14%;
+        left: 30%;
     }
 
     .image4 {
         position: absolute;
-        top: 290;
-        left: 340;
+        top: 49%;
+        left: 35.5%;
     }
 
     .image5 {
         position: absolute;
-        top: 200;
-        left: 590;
+        top: 33%;
+        left: 61.5%;
     }
 
     .toast {
