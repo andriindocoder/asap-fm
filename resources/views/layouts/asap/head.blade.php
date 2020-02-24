@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="{{ asset('frontend/plugins/fontawesome-free/css/all.min.css') }}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset('frontend/dist/css/adminlte.min.css') }}">
+<link rel="shortcut icon" href="{{ asset('frontend/images/logosedaniatrans.png') }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ asset('frontend/plugins/toastr/toastr.min.css') }}">
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 <script src="https://code.highcharts.com/highcharts.js"></script>

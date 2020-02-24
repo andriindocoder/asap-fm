@@ -23,8 +23,8 @@
 
     .image3 {
         position: absolute;
-        top: 75;
-        left: 180;
+        top: 85;
+        left: 187;
     }
 
     .image4 {
@@ -38,11 +38,15 @@
         top: 200;
         left: 590;
     }
+
+    .toast {
+        opacity: 1 !important;
+    }
 </style>
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper" style="background-color: rgb(210, 243, 254); min-height: 609px;">
+<div class="content-wrapper py-3" style="background-color: rgb(210, 243, 254); min-height: 609px;">
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -157,7 +161,10 @@
                                                         <td>45s</td>
                                                         <td style="width: 40%;">
                                                             <button
-                                                                class="btn btn-sm btn-outline-danger">Disarm</button>
+                                                                class="btn btn-sm btn-outline-success activate">Simulate
+                                                                Alarm</button>
+                                                            <button
+                                                                class="btn btn-sm btn-outline-danger disarm">Disarm</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -243,7 +250,7 @@
                                 <img class="image1" width="740px" height="590px"
                                     src="{{ asset('frontend/images/showroom.jpg') }}" />
                                 <img width="5%" class="image2" src="{{ asset('frontend/gifs/greencircle.gif') }}" />
-                                <img width="7%" class="image3" src="{{ asset('frontend/gifs/firealarm.gif') }}" />
+                                <img width="5%" class="image3" src="{{ asset('frontend/gifs/greencircle.gif') }}" />
                                 <img width="5%" class="image4" src="{{ asset('frontend/gifs/greencircle.gif') }}" />
                                 <img width="5%" class="image5" src="{{ asset('frontend/gifs/greencircle.gif') }}" />
                             </div>
@@ -386,5 +393,42 @@
           }
       }]
   });
+</script>
+<script>
+    var blink = false;
+    var x;
+
+    function changecolors(status) {
+        x = 1;
+        if(status == true) {
+        setInterval(change, 1000);
+        }
+    }
+
+    function change() {
+        if (x === 1) {
+            color = "blue";
+            x = 2;
+        } else {
+            color = "yellow";
+            x = 1;
+        }
+        document.querySelector('.content-wrapper').style.backgroundColor = color;
+        document.querySelector('nav').style.backgroundColor = color;
+    }
+
+    const disarmBtn = document.querySelector('.disarm');
+    const image3 = document.querySelector('.image3');
+    disarmBtn.addEventListener('click', function(){
+        toastr.success('Alarm Disarmed!');
+        window.location.reload();
+    });
+
+    const activateBtn = document.querySelector('.activate');
+    activateBtn.addEventListener('click', function() {
+        var blink = true;
+        changecolors(blink);
+        image3.src = 'frontend/gifs/firealarm.gif';
+    });
 </script>
 @endsection
